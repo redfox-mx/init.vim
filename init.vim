@@ -1,0 +1,45 @@
+
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'preservim/nerdtree'
+
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+call plug#end()
+
+let mapleader=","
+
+filetype plugin indent on
+set relativenumber
+set number
+set cursorline
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set showcmd
+
+function! ToggleRelativeNumber()
+  if &relativenumber
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunction
+
+nmap <leader>n :call ToggleRelativeNumber()<CR>
+
+if has('nvim') || has('termguicolors')
+  set termguicolors
+endif
+colorscheme challenger_deep
+
+" coc config
+let g:coc_global_extensions = ['coc-html', 'coc-angular', 'coc-css', 'coc-eslint', 'coc-tsserver']
+
+" nerdtree
+nnoremap <C-t> :NERDTreeToggle<CR>
+
+
