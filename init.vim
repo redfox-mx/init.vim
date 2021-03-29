@@ -8,6 +8,10 @@ Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'vim-airline/vim-airline'
+
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 let mapleader=","
@@ -42,4 +46,6 @@ let g:coc_global_extensions = ['coc-html', 'coc-angular', 'coc-css', 'coc-eslint
 " nerdtree
 nnoremap <C-t> :NERDTreeToggle<CR>
 
-
+" airline config
+let g:airline#exxtensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
