@@ -1,5 +1,3 @@
-
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'preservim/nerdtree'
@@ -16,10 +14,8 @@ call plug#end()
 
 let mapleader=","
 
-filetype plugin indent on
 set relativenumber
 set number
-set cursorline
 set expandtab
 set shiftwidth=2
 set softtabstop=2
@@ -38,6 +34,7 @@ nmap <leader>n :call ToggleRelativeNumber()<CR>
 if has('nvim') || has('termguicolors')
   set termguicolors
 endif
+
 colorscheme challenger_deep
 
 " coc config
