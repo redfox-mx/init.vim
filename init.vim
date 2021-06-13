@@ -1,21 +1,16 @@
-call plug#begin('~/.vim/plugged')
+set encoding=UTF-8
 
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-Plug 'Luxed/ayu-vim'
+let g:nvim_home = expand( stdpath('config') )
 
-" Plug 'Yggdroot/indentLine'
+let config_list = [
+        \ '/plugins.vim'
+        \]
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-Plug 'vim-airline/vim-airline'
-
-Plug 'preservim/nerdtree'
-
-Plug 'leafgarland/typescript-vim'
-
-Plug 'tpope/vim-fugitive'
-
-call plug#end()
+for files in config_list
+  for f in glob(g:nvim_home . files, 1, 1)
+    exec 'source' f
+  endfor
+endfor
 
 let mapleader=","
 
@@ -78,3 +73,4 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 " airline config
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+
