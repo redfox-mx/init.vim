@@ -34,7 +34,7 @@ Plug 'vim-airline/vim-airline'
 " -> editing
 
 " add indentation with symbols
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 
 " trailing whitespace highlighting & automatic fixing
 Plug 'ntpeters/vim-better-whitespace'

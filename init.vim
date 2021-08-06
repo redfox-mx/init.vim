@@ -17,7 +17,7 @@ endfor
 " indentLine config
 " let g:indentLine_setColors = 0
 
-let g:indentLine_char = '|'
+" let g:indentLine_char = '|'
 
 " coc config
 let g:coc_global_extensions = ['coc-html', 'coc-css', 'coc-eslint', 'coc-tsserver']
